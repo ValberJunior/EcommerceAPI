@@ -29,7 +29,7 @@ res.status(500).json(err);
 
 //Login
 
-router.post("/login", async(req, res)=>{
+router.post("/login", async (req, res) => {
     
     try{
     const user = await User.findOne({username: req.body.username});
@@ -40,9 +40,9 @@ router.post("/login", async(req, res)=>{
     OriginalPassword !== req.body.password && res.status(401).json('Wrong credentials!');
 
     const accessToken = jwt.sign({
-        id: user.id._id, isAdmin: user.isAdmin
+        id: user._id, isAdmin: user.isAdmin
     }, process.env.JWT_SEC,
-    {exoireIn:'3d'})
+    {expiresIn:'3d'})
 
     const { password, ...others} = user._doc;
 
