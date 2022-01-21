@@ -18,7 +18,8 @@ mongoose.connect(process.env.MONGO_ATLAS_URL)
 
 app.use(cors());
 app.use(express.json());
-app.use('api/auth', authRoute);
+app.use(express.urlencoded({extended: true}));
+app.use('/api/auth', authRoute);
 app.use('/api/user', userRoute);
 app.use('/api/products', productsRoute);
 app.use('/api/carts', cartRoute);
