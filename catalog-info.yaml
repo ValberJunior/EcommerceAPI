@@ -8,4 +8,4 @@ spec:
   lifecycle: production
   owner: group:backstage_admin
   definition:
-    $text: https://petstore.swagger.io/v2/swagger.json
+    $text: https://github.com/ValberJunior/EcommerceAPI
