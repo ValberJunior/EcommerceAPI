@@ -1,11 +1,12 @@
-apiVersion: ecommerce.io/v1
+apiVersion: 
 kind: API
 metadata:
-  name: Ecommerce-API
-  description: The Ecommerce API
+  name: Ecommerce-api
+  description: Ecommerce API Rest
+  tags:
+    - api
+    - rest
 spec:
   type: openapi
   lifecycle: production
   owner: group:backstage_admin
-  definition:
-    $text: https://github.com/ValberJunior/EcommerceAPI
