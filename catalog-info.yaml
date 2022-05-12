@@ -1,0 +1,11 @@
+apiVersion: ecommerce.io/v1
+kind: API
+metadata:
+  name: Ecommerce-API
+  description: The Ecommerce API
+spec:
+  type: openapi
+  lifecycle: production
+  owner: group:backstage_admin
+  definition:
+    $text: https://petstore.swagger.io/v2/swagger.json
