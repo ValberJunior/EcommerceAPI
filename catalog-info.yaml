@@ -1,10 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: Example API
-  description: Example web API
+  name: spotify
+  description: The Spotify web API
   tags:
-    - Ecommerce
+    - spotify
     - rest
   annotations:
     # The annotation is deprecated, we use placeholders (see below) instead, remove it later.
@@ -12,6 +12,6 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: backstege_admin
+  owner: backstage-admin
   definition:
     $text: https://github.com/APIs-guru/openapi-directory/blob/dab6854d4d599aafb0eb36e6c7ae1fe0c37509b7/APIs/spotify.com/2021.4.2/openapi.yaml
